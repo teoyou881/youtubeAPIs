@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'
 import {useState} from 'react';
 import MyIframe from './components/makeIframe.js';
+import DynamicSearch from './components/dynamicSearch.js';
 
 function getUrl() {
   return "https://www.youtube.com/embed/8OnUoe1kXpA?si=fihVSKur9EIfvIt0";
@@ -16,6 +17,10 @@ export default function App() {
 
   return (
     <div>
+      <h3>Search for a channel</h3>
+      <div name='search_container'>
+        <DynamicSearch/>
+      </div>
       <h1>Select a Date Range to Search</h1>
       <div name="calendar_container">
         <Calendar onChange={setDate} value={date} selectRange={true}/>

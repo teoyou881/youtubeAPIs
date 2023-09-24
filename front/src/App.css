@@ -42,7 +42,7 @@ body {
   text-align: center;
 }
 
-div [name="calendar_container"] {
+div [name="calendar_container"], div [name="search_container"] {
   display: flex;
   justify-content: center;
   align-items: center;
